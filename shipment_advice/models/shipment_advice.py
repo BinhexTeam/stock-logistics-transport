@@ -185,6 +185,14 @@ class ShipmentAdvice(models.Model):
     )
 
     error_message = fields.Text(tracking=True)
+    notes = fields.Text(
+        states={
+            "draft": [("readonly", False)],
+            "confirmed": [("readonly", False)],
+            "in_progress": [("readonly", False)],
+        },
+        readonly=True,
+    )
 
     _sql_constraints = [
         (
