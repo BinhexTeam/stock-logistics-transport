@@ -208,6 +208,9 @@
                             <field name="ref" />
                         </group>
                     </group>
+                    <group name="notes" string="Notes">
+                        <field name="notes" nolabel="1" colspan="2" />
+                    </group>
                     <field name="planned_picking_ids" invisible="1" />
                     <field name="planned_move_ids" invisible="1" />
                     <field name="loaded_picking_ids" invisible="1" />
